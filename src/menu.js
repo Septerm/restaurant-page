@@ -1,39 +1,65 @@
 
+import dishOne from "./images/dish_1.webp"
+import dishTwo from "./images/dish_2.webp"
+import dishThree from "./images/dish_3.webp"
+import dishFour from "./images/dish_4.webp"
+import dishFive from "./images/dish_5.webp"
+import dishSix from "./images/dish_6.webp"
+
 export const menu = function () {
+
+    
+    
 
     const items = [
 
         {
-            image: "https://images.unsplash.com/photo-1668665771867-7b3b53d7597a?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            imageAlt: "Chicken",
+            image: dishOne ,
+            imageAlt: "Chicken Dish",
             title: "Pepper Chicken",
-            discription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod unde reiciendis eos. Sequi dolorum nulla repellat rem, perspiciatis harum accusantium",
+            description: "Tender chicken breast seared with cracked black pepper and tossed in a rich, savory herb reduction.",
             price: "$50",
         },
 
         {
-            image: "https://images.unsplash.com/photo-1668665771867-7b3b53d7597a?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            imageAlt: "Chicken",
-            title: "Pepper Chicken",
-            discription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod unde reiciendis eos. Sequi dolorum nulla repellat rem, perspiciatis harum accusantium",
-            price: "$50",
+            image: dishTwo,
+            imageAlt: "Roast Beef Dish",
+            title: "Roast Beef",
+            description: "Slow-roasted, succulent beef sliced thin and served with a rich, house-made pan gravy",
+            price: "$75",
         },
 
         {
-            image: "https://images.unsplash.com/photo-1668665771867-7b3b53d7597a?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            imageAlt: "Chicken",
-            title: "Pepper Chicken",
-            discription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod unde reiciendis eos. Sequi dolorum nulla repellat rem, perspiciatis harum accusantium",
-            price: "$50",
+            image: dishThree,
+            imageAlt: "Spaghetti And Meatballs Dish",
+            title: "Spaghetti And Meatballs",
+            description: "Al dente pasta tossed in rich marinara sauce and topped with handcrafted, seasoned beef meatballs.",
+            price: "$35",
         },
 
         {
-            image: "https://images.unsplash.com/photo-1668665771867-7b3b53d7597a?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            imageAlt: "Chicken",
-            title: "Pepper Chicken",
-            discription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod unde reiciendis eos. Sequi dolorum nulla repellat rem, perspiciatis harum accusantium",
-            price: "$50",
-        }
+            image: dishFour,
+            imageAlt: "Seasoned Fish Dish",
+            title: "Seasoned Fish",
+            description: "Flaky fillet pan-seared to perfection with a blend of Mediterranean herbs and warm spices.",
+            price: "$75",
+        },
+
+        {
+            image: dishFive,
+            imageAlt: "Shrimp Meal Dish",
+            title: "Shrimp Meal",
+            description: "Juicy, wild-caught shrimp sautéed in garlic butter and served over a bed of seasoned rice.",
+            price: "$100",
+        },
+
+        {
+            image: dishSix,
+            imageAlt: "Oyster Dish",
+            title: "Lemon Squeezed Oysters",
+            description: "Freshly shucked coastal oysters served chilled on the half shell with a bright, zesty squeeze of lemon.",
+            price: "$120",
+        },
     ]
 
     const main = document.querySelector('main');
@@ -72,15 +98,15 @@ export const menu = function () {
         const title = document.createElement('h3');
         title.textContent = item.title;
 
-        const discription = document.createElement('p')
-        discription.textContent = item.discription;
+        const description = document.createElement('p')
+        description.textContent = item.description;
 
         const price = document.createElement('p');
         price.classList.add('price');
         price.textContent = item.price;
 
         cardText.appendChild(title);
-        cardText.appendChild(discription);
+        cardText.appendChild(description);
         cardText.appendChild(price);
 
         card.appendChild(image);

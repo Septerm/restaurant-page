@@ -1,8 +1,12 @@
+import { menu } from "./menu";
 
 
 export const home = function () {
 
     const main  = document.querySelector('main');
+    const homeBtn = document.querySelector("#home button");
+    const menuBtn = document.querySelector("#menu button");
+    const aboutBtn = document.querySelector("#about button");
     main.classList.add("main-home")
 
     main.innerHTML = '';
@@ -22,6 +26,18 @@ export const home = function () {
     const heroButton = document.createElement('button');
     heroButton.textContent = "VIEW MENU"
     heroButton.classList.add("hero-btn")
+
+    heroButton.addEventListener('click', () => {
+
+        main.classList.remove('main-home', 'main-about')
+            main.classList.add('main-menu')
+        
+            menuBtn.classList.add('active-btn');
+            homeBtn.classList.remove('active-btn');
+            aboutBtn.classList.remove('active-btn');
+        
+            menu();
+    })
     hero.appendChild(heroButton);
 
     main.appendChild(hero);
